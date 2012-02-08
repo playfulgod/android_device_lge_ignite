@@ -1,0 +1,121 @@
+LG AS855 Ignite
+
+cat /proc/mtd NOT FOUND. Did find the below.
+
+ls /dev/block/mmcblk* OUTPUT
+
+/dev/block/mmcblk0
+
+/dev/block/mmcblk0p1
+
+/dev/block/mmcblk0p10
+
+/dev/block/mmcblk0p11
+
+/dev/block/mmcblk0p12
+
+/dev/block/mmcblk0p2
+
+/dev/block/mmcblk0p3
+
+/dev/block/mmcblk0p4
+
+/dev/block/mmcblk0p5
+
+/dev/block/mmcblk0p6
+
+/dev/block/mmcblk0p7
+
+/dev/block/mmcblk0p8
+
+/dev/block/mmcblk0p9
+
+/dev/block/mmcblk1
+
+/dev/block/mmcblk1p1
+
+
+recovery.fstab (file from LG sourcecode)
+# mount point	fstype	device			[device2]
+/data		ext4	/dev/block/mmcblk0p6
+/cache		ext4	/dev/block/mmcblk0p7
+/sdcard		vfat	/dev/block/mmcblk1p1	/dev/block/mmcblk1
+/system		ext4	/dev/block/mmcblk0p5
+/misc		emmc	/dev/block/mmcblk0p10
+/boot		emmc	/dev/block/mmcblk0p3
+/recovery		emmc	/dev/block/mmcblk0p4
+
+
+cat /proc/cpuinfo OUTPUT
+Processor	: ARMv7 Processor rev 2 (v7l)
+Bogo
+MIPS	: 996.74
+
+Features	: swp half thumb fastmult vfp edsp neon vfpv3 
+
+CPU implementer	: 0x41
+
+CPU architecture: 7
+
+CPU variant	: 0x3
+
+CPU part	: 0xc08
+
+CPU revision	: 2
+
+
+Hardware	: LGE Sniper board
+
+Revision	: 0014
+
+Serial		: 0000000000000000
+
+
+cat /proc/partitions OUTPUT
+major minor  #blocks  name
+
+
+   7        0      12506 loop0
+
+   7        1      28098 loop1
+
+   7        2       3150 loop2
+
+ 179        0    3784704 mmcblk0
+
+ 179        1        128 mmcblk0p1
+
+ 179        2        384 mmcblk0p2
+
+ 179        3       5120 mmcblk0p3
+
+ 179        4       5120 mmcblk0p4
+
+ 179        5     419840 mmcblk0p5
+
+ 179        6    2097152 mmcblk0p6
+
+ 179        7     307200 mmcblk0p7
+
+ 179        8       2048 mmcblk0p8
+
+ 179        9       2048 mmcblk0p9
+
+ 179       10        128 mmcblk0p10
+
+ 179       11       5120 mmcblk0p11
+
+ 179       12        128 mmcblk0p12
+
+ 179       16    7778304 mmcblk1
+
+ 179       17    7777280 mmcblk1p1
+
+ 254        0      12505 dm-0
+
+ 254        1      28098 dm-1
+
+ 254        2       3150 dm-2
+
+
+
