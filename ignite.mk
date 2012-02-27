@@ -21,7 +21,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILE += \
     device/lge/ignite/recovery/recovery.rc:recovery/root/recovery.rc \
     device/lge/ignite/ueventd.rc:recovery/root/ueventd.rc \
-    device/lge/ignite/recovery/postrecoveryboot.sh:recovery/root/postrecoveryboot.sh 
+    device/lge/ignite/recovery/postrecoveryboot.sh:recovery/root/postrecoveryboot.sh \
+    device/lge/ignite/init.rc:recovery/root/init.rc \
+    device/lge/ignite/ueventd.rc:recovery/root/ueventd.rc \
+    device/lge/ignite/init.omap.post_boot.sh:recovery/root/init.omap.post_boot.sh 
 
 $(call inherit-product, build/target/product/full.mk)
 
