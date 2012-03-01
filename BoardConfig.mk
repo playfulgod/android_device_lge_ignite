@@ -33,8 +33,12 @@ BOARD_USES_MMCUTILS := true
 
 TARGET_PREBUILT_KERNEL := device/lge/ignite/kernel
 
-BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/lge/ignite/recovery/recovery_ui.c
+#BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/lge/ignite/recovery/recovery_ui.c
 
+# Recovery Options
 BOARD_HAS_NO_SELECT_BUTTON := true
+#TARGET_RECOVERY_INITRC := device/lge/ignite/recovery/recovery.rc
 # Use this flag if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
+
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
