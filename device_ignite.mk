@@ -7,9 +7,9 @@ $(call inherit-product-if-exists, vendor/lge/ignite/ignite-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/lge/ignite/overlay
 
-
+LOCAL_PATH := device/lge/ignite
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/lge/ignite/kernel
+	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -22,3 +22,4 @@ $(call inherit-product, build/target/product/full.mk)
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_ignite
 PRODUCT_DEVICE := ignite
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh

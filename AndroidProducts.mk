@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/ignite.mk
+    $(LOCAL_DIR)/device_ignite.mk
