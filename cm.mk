@@ -14,5 +14,5 @@ $(call inherit-product, device/lge/ignite/device_ignite.mk)
 PRODUCT_DEVICE := ignite
 PRODUCT_NAME := cm_ignite
 PRODUCT_BRAND := lge
-PRODUCT_MODEL := Ignite
+PRODUCT_MODEL := AS855
 PRODUCT_MANUFACTURER := LGE
